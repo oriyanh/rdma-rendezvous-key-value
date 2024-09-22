@@ -1,3 +1,7 @@
+# IDE
+.vscode
+.idea
+
 # Prerequisites
 *.d
 
@@ -50,3 +54,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+.idea
+client
+server
+*.code-workspace

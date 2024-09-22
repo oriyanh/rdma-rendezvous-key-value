@@ -1,0 +1,1153 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 74.46     10.95    10.95 25672599     0.00     0.00  db_get
+ 11.50     12.64     1.69 25051683     0.00     0.00  get_server_pending_request
+  2.04     12.94     0.30 21904123     0.00     0.00  pending_req_count
+  1.94     13.22     0.29 21904102     0.00     0.00  handle_pending_request
+  1.43     13.43     0.21 21904102     0.00     0.00  check_available_connection_slots
+  1.16     13.60     0.17 21904102     0.00     0.00  server_wait_completions
+  0.95     13.74     0.14 25034779     0.00     0.00  pop_pending_request
+  0.88     13.87     0.13 25034938     0.00     0.00  push_pending_request
+  0.82     13.99     0.12 24267522     0.00     0.00  handle_set_request
+  0.68     14.09     0.10 25018193     0.00     0.00  push_back_pending_request
+  0.54     14.17     0.08   328000     0.00     0.00  server_post_recv
+  0.48     14.24     0.07 21904102     0.00     0.00  ibv_poll_cq
+  0.48     14.31     0.07   310492     0.00     0.00  query_for_connections
+  0.27     14.35     0.04 21904102     0.00     0.00  accept_new_connection
+  0.27     14.39     0.04   341759     0.00     0.00  mark_rdma_fin_received
+  0.27     14.43     0.04        1     0.04    14.67  server_loop
+  0.20     14.46     0.03    16745     0.00     0.00  add_server_pending_request
+  0.20     14.49     0.03        1     0.03     0.03  reallocate_entries
+  0.17     14.52     0.03   326034     0.00     0.00  handle_recv_request
+  0.14     14.54     0.02 24267522     0.00     0.00  db_entry_lock_wr
+  0.14     14.56     0.02  1063531     0.00     0.00  handle_get_request
+  0.14     14.58     0.02   312002     0.00     0.00  remove_server_pending_request
+  0.14     14.60     0.02    29760     0.00     0.00  mark_rdma_fin_required
+  0.14     14.62     0.02                             push_front_pending_request
+  0.10     14.63     0.02        1     0.02     0.02  db_init
+  0.07     14.64     0.01  2092890     0.00     0.00  request_compare
+  0.07     14.65     0.01   328000     0.00     0.00  get_free_recv_idx
+  0.07     14.66     0.01   162166     0.00     0.00  free_send_buffer
+  0.07     14.67     0.01   134000     0.00     0.00  db_insert
+  0.07     14.68     0.01        4     0.00     0.00  remove_connection
+  0.07     14.69     0.01        1     0.01     0.01  clear_preallocated_buffers
+  0.07     14.70     0.01                             main
+  0.00     14.70     0.00  1063531     0.00     0.00  db_entry_lock_rd
+  0.00     14.70     0.00   654034     0.00     0.00  get_recv_buffer
+  0.00     14.70     0.00   337411     0.00     0.00  release_receive_buffer
+  0.00     14.70     0.00   328000     0.00     0.00  acquire_receive_buffer
+  0.00     14.70     0.00   328000     0.00     0.00  ibv_post_recv
+  0.00     14.70     0.00   326038     0.00     0.00  get_connection
+  0.00     14.70     0.00   324333     0.00     0.00  get_send_buffer
+  0.00     14.70     0.00   296112     0.00     0.00  db_entry_unlock
+  0.00     14.70     0.00   162167     0.00     0.00  acquire_send_buffer
+  0.00     14.70     0.00   162167     0.00     0.00  get_free_send_buffer
+  0.00     14.70     0.00   162167     0.00     0.00  get_free_send_idx
+  0.00     14.70     0.00   162167     0.00     0.00  ibv_post_send
+  0.00     14.70     0.00   162167     0.00     0.00  server_post_send
+  0.00     14.70     0.00   162166     0.00     0.00  release_send_buffer
+  0.00     14.70     0.00   147978     0.00     0.00  db_reallocate_item
+  0.00     14.70     0.00    46506     0.00     0.00  get_empty_buffer
+  0.00     14.70     0.00      364     0.00     0.00  server_post_recv_buffers
+  0.00     14.70     0.00       52     0.00     0.00  get_empty_buffer
+  0.00     14.70     0.00        4     0.00     0.00  add_new_connection
+  0.00     14.70     0.00        4     0.00     0.00  connect_ctx
+  0.00     14.70     0.00        4     0.00     0.00  create_new_qp
+  0.00     14.70     0.00        4     0.00     0.00  gid_to_wire_gid
+  0.00     14.70     0.00        4     0.00     0.00  handle_received_connection_data
+  0.00     14.70     0.00        4     0.00     0.00  send_address_back_to_client
+  0.00     14.70     0.00        4     0.00     0.00  wire_gid_to_gid
+  0.00     14.70     0.00        3     0.00     0.00  invalidate_requests_by_qp
+  0.00     14.70     0.00        1     0.00     0.00  ___ibv_query_port
+  0.00     14.70     0.00        1     0.00     0.00  clear_preallocated_buffers
+  0.00     14.70     0.00        1     0.00     0.00  create_listen_socket
+  0.00     14.70     0.00        1     0.00     0.00  db_destroy
+  0.00     14.70     0.00        1     0.00     0.00  get_port_info
+  0.00     14.70     0.00        1     0.00     0.02  init_server_connection
+  0.00     14.70     0.00        1     0.00    14.67  main_loop
+  0.00     14.70     0.00        1     0.00     0.00  reallocate_entries
+  0.00     14.70     0.00        1     0.00     0.00  send_server_shutdown_message
+  0.00     14.70     0.00        1     0.00     0.00  server_close_ctx
+  0.00     14.70     0.00        1     0.00     0.00  server_init_ctx
+  0.00     14.70     0.00        1     0.00     0.01  server_pending_request_destroy
+  0.00     14.70     0.00        1     0.00     0.00  server_pending_requests_init
+  0.00     14.70     0.00        1     0.00     0.01  teardown_server_connection
+  0.00     14.70     0.00        1     0.00     0.00  verbs_get_ctx
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.07% of 14.70 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     99.9    0.01   14.67                 main [1]
+                0.00   14.67       1/1           main_loop [2]
+-----------------------------------------------
+                0.00   14.67       1/1           main [1]
+[2]     99.8    0.00   14.67       1         main_loop [2]
+                0.04   14.63       1/1           server_loop [3]
+-----------------------------------------------
+                0.04   14.63       1/1           main_loop [2]
+[3]     99.8    0.04   14.63       1         server_loop [3]
+                0.29   13.44 21904102/21904102     handle_pending_request [4]
+                0.17    0.38 21904102/21904102     server_wait_completions [10]
+                0.04    0.28 21904102/21904102     accept_new_connection [11]
+                0.00    0.02       1/1           init_server_connection [31]
+                0.00    0.01       1/1           teardown_server_connection [33]
+-----------------------------------------------
+                0.29   13.44 21904102/21904102     server_loop [3]
+[4]     93.4    0.29   13.44 21904102         handle_pending_request [4]
+                0.12   12.36 24119385/24267522     handle_set_request [5]
+                0.02    0.50  915394/1063531     handle_get_request [9]
+                0.30    0.00 21904123/21904123     pending_req_count [13]
+                0.14    0.00 25034779/25034779     pop_pending_request [15]
+-----------------------------------------------
+                0.00    0.08  148137/24267522     handle_recv_request [12]
+                0.12   12.36 24119385/24267522     handle_pending_request [4]
+[5]     85.4    0.12   12.44 24267522         handle_set_request [5]
+               10.35    0.00 24267573/25672599     db_get [6]
+                0.13    1.76 24119544/25034938     push_pending_request [7]
+                0.01    0.11  134000/134000      db_insert [16]
+                0.01    0.02  133949/312002      remove_server_pending_request [22]
+                0.01    0.02   14029/29760       mark_rdma_fin_required [24]
+                0.02    0.00 24267522/24267522     db_entry_lock_wr [29]
+                0.00    0.01   14029/147978      db_reallocate_item [23]
+                0.00    0.00  133949/296112      db_entry_unlock [51]
+                0.00    0.00   14029/162167      get_free_send_buffer [53]
+                0.00    0.00   14029/162167      server_post_send [56]
+-----------------------------------------------
+                0.01    0.00   29757/25672599     handle_recv_request [12]
+                0.01    0.00   29760/25672599     mark_rdma_fin_required [24]
+                0.06    0.00  134000/25672599     db_insert [16]
+                0.06    0.00  147978/25672599     db_reallocate_item [23]
+                0.45    0.00 1063531/25672599     handle_get_request [9]
+               10.35    0.00 24267573/25672599     handle_set_request [5]
+[6]     74.5   10.95    0.00 25672599         db_get [6]
+-----------------------------------------------
+                0.00    0.07  915394/25034938     handle_get_request [9]
+                0.13    1.76 24119544/25034938     handle_set_request [5]
+[7]     13.3    0.13    1.83 25034938         push_pending_request [7]
+                1.69    0.00 25051683/25051683     get_server_pending_request [8]
+                0.10    0.00 25018193/25018193     push_back_pending_request [17]
+                0.03    0.01   16745/16745       add_server_pending_request [25]
+-----------------------------------------------
+                1.69    0.00 25051683/25051683     push_pending_request [7]
+[8]     11.5    1.69    0.00 25051683         get_server_pending_request [8]
+-----------------------------------------------
+                0.00    0.08  148137/1063531     handle_recv_request [12]
+                0.02    0.50  915394/1063531     handle_pending_request [4]
+[9]      4.1    0.02    0.58 1063531         handle_get_request [9]
+                0.45    0.00 1063531/25672599     db_get [6]
+                0.00    0.07  915394/25034938     push_pending_request [7]
+                0.01    0.02  148137/312002      remove_server_pending_request [22]
+                0.01    0.02   15731/29760       mark_rdma_fin_required [24]
+                0.00    0.00 1063531/1063531     db_entry_lock_rd [44]
+                0.00    0.00  148137/162167      get_free_send_buffer [53]
+                0.00    0.00  148137/162167      server_post_send [56]
+                0.00    0.00  132406/296112      db_entry_unlock [51]
+-----------------------------------------------
+                0.17    0.38 21904102/21904102     server_loop [3]
+[10]     3.8    0.17    0.38 21904102         server_wait_completions [10]
+                0.03    0.28  326034/326034      handle_recv_request [12]
+                0.07    0.00 21904102/21904102     ibv_poll_cq [21]
+                0.01    0.00  162166/162166      free_send_buffer [38]
+                0.00    0.00  326034/337411      release_receive_buffer [46]
+-----------------------------------------------
+                0.04    0.28 21904102/21904102     server_loop [3]
+[11]     2.2    0.04    0.28 21904102         accept_new_connection [11]
+                0.21    0.00 21904102/21904102     check_available_connection_slots [14]
+                0.07    0.00  310492/310492      query_for_connections [20]
+                0.00    0.00       1/1           create_listen_socket [66]
+-----------------------------------------------
+                0.03    0.28  326034/326034      server_wait_completions [10]
+[12]     2.1    0.03    0.28  326034         handle_recv_request [12]
+                0.00    0.09     360/364         server_post_recv_buffers [18]
+                0.00    0.08  148137/1063531     handle_get_request [9]
+                0.00    0.08  148137/24267522     handle_set_request [5]
+                0.01    0.00   29757/25672599     db_get [6]
+                0.01    0.00       3/4           remove_connection [35]
+                0.00    0.00   29757/312002      remove_server_pending_request [22]
+                0.00    0.00   29757/341759      mark_rdma_fin_received [26]
+                0.00    0.00  326034/326038      get_connection [49]
+                0.00    0.00  326034/654034      get_recv_buffer [45]
+-----------------------------------------------
+                0.30    0.00 21904123/21904123     handle_pending_request [4]
+[13]     2.0    0.30    0.00 21904123         pending_req_count [13]
+-----------------------------------------------
+                0.21    0.00 21904102/21904102     accept_new_connection [11]
+[14]     1.4    0.21    0.00 21904102         check_available_connection_slots [14]
+-----------------------------------------------
+                0.14    0.00 25034779/25034779     handle_pending_request [4]
+[15]     1.0    0.14    0.00 25034779         pop_pending_request [15]
+-----------------------------------------------
+                0.01    0.11  134000/134000      handle_set_request [5]
+[16]     0.8    0.01    0.11  134000         db_insert [16]
+                0.06    0.00  134000/25672599     db_get [6]
+                0.00    0.06  133949/147978      db_reallocate_item [23]
+                0.00    0.00      51/52          get_empty_buffer [58]
+-----------------------------------------------
+                0.10    0.00 25018193/25018193     push_pending_request [7]
+[17]     0.7    0.10    0.00 25018193         push_back_pending_request [17]
+-----------------------------------------------
+                0.00    0.00       4/364         handle_received_connection_data [41]
+                0.00    0.09     360/364         handle_recv_request [12]
+[18]     0.6    0.00    0.09     364         server_post_recv_buffers [18]
+                0.08    0.00  328000/328000      server_post_recv [19]
+                0.01    0.00  328000/328000      get_free_recv_idx [37]
+-----------------------------------------------
+                0.08    0.00  328000/328000      server_post_recv_buffers [18]
+[19]     0.5    0.08    0.00  328000         server_post_recv [19]
+                0.00    0.00  328000/654034      get_recv_buffer [45]
+                0.00    0.00  328000/328000      ibv_post_recv [48]
+                0.00    0.00  328000/328000      acquire_receive_buffer [47]
+-----------------------------------------------
+                0.07    0.00  310492/310492      accept_new_connection [11]
+[20]     0.5    0.07    0.00  310492         query_for_connections [20]
+                0.00    0.00       4/4           handle_received_connection_data [41]
+-----------------------------------------------
+                0.07    0.00 21904102/21904102     server_wait_completions [10]
+[21]     0.5    0.07    0.00 21904102         ibv_poll_cq [21]
+-----------------------------------------------
+                0.00    0.00      76/312002      invalidate_requests_by_qp [42]
+                0.00    0.00      83/312002      server_pending_request_destroy [34]
+                0.00    0.00   29757/312002      handle_recv_request [12]
+                0.01    0.02  133949/312002      handle_set_request [5]
+                0.01    0.02  148137/312002      handle_get_request [9]
+[22]     0.5    0.02    0.05  312002         remove_server_pending_request [22]
+                0.04    0.00  312002/341759      mark_rdma_fin_received [26]
+                0.01    0.00 2092890/2092890     request_compare [36]
+-----------------------------------------------
+                0.00    0.01   14029/147978      handle_set_request [5]
+                0.00    0.06  133949/147978      db_insert [16]
+[23]     0.4    0.00    0.06  147978         db_reallocate_item [23]
+                0.06    0.00  147978/25672599     db_get [6]
+-----------------------------------------------
+                0.01    0.02   14029/29760       handle_set_request [5]
+                0.01    0.02   15731/29760       handle_get_request [9]
+[24]     0.4    0.02    0.03   29760         mark_rdma_fin_required [24]
+                0.00    0.02   29760/46506       get_empty_buffer [27]
+                0.01    0.00   29760/25672599     db_get [6]
+-----------------------------------------------
+                0.03    0.01   16745/16745       push_pending_request [7]
+[25]     0.3    0.03    0.01   16745         add_server_pending_request [25]
+                0.00    0.01   16745/46506       get_empty_buffer [27]
+-----------------------------------------------
+                0.00    0.00   29757/341759      handle_recv_request [12]
+                0.04    0.00  312002/341759      remove_server_pending_request [22]
+[26]     0.3    0.04    0.00  341759         mark_rdma_fin_received [26]
+                0.00    0.00   29757/296112      db_entry_unlock [51]
+-----------------------------------------------
+                0.00    0.00       1/46506       server_pending_requests_init [43]
+                0.00    0.01   16745/46506       add_server_pending_request [25]
+                0.00    0.02   29760/46506       mark_rdma_fin_required [24]
+[27]     0.2    0.00    0.03   46506         get_empty_buffer [27]
+                0.03    0.00       1/1           reallocate_entries [28]
+-----------------------------------------------
+                0.03    0.00       1/1           get_empty_buffer [27]
+[28]     0.2    0.03    0.00       1         reallocate_entries [28]
+-----------------------------------------------
+                0.02    0.00 24267522/24267522     handle_set_request [5]
+[29]     0.1    0.02    0.00 24267522         db_entry_lock_wr [29]
+-----------------------------------------------
+                                                 <spontaneous>
+[30]     0.1    0.02    0.00                 push_front_pending_request [30]
+-----------------------------------------------
+                0.00    0.02       1/1           server_loop [3]
+[31]     0.1    0.00    0.02       1         init_server_connection [31]
+                0.02    0.00       1/1           db_init [32]
+                0.00    0.00       1/1           server_pending_requests_init [43]
+                0.00    0.00       1/1           server_init_ctx [71]
+                0.00    0.00       1/1           get_port_info [68]
+-----------------------------------------------
+                0.02    0.00       1/1           init_server_connection [31]
+[32]     0.1    0.02    0.00       1         db_init [32]
+                0.00    0.00       1/52          get_empty_buffer [58]
+-----------------------------------------------
+                0.00    0.01       1/1           server_loop [3]
+[33]     0.1    0.00    0.01       1         teardown_server_connection [33]
+                0.00    0.01       1/1           server_pending_request_destroy [34]
+                0.00    0.00       1/1           server_close_ctx [40]
+                0.00    0.00       1/1           db_destroy [67]
+-----------------------------------------------
+                0.00    0.01       1/1           teardown_server_connection [33]
+[34]     0.1    0.00    0.01       1         server_pending_request_destroy [34]
+                0.01    0.00       1/1           clear_preallocated_buffers [39]
+                0.00    0.00      83/312002      remove_server_pending_request [22]
+-----------------------------------------------
+                0.00    0.00       1/4           server_close_ctx [40]
+                0.01    0.00       3/4           handle_recv_request [12]
+[35]     0.1    0.01    0.00       4         remove_connection [35]
+                0.00    0.00       3/3           invalidate_requests_by_qp [42]
+                0.00    0.00   11377/337411      release_receive_buffer [46]
+                0.00    0.00       4/326038      get_connection [49]
+-----------------------------------------------
+                0.01    0.00 2092890/2092890     remove_server_pending_request [22]
+[36]     0.1    0.01    0.00 2092890         request_compare [36]
+-----------------------------------------------
+                0.01    0.00  328000/328000      server_post_recv_buffers [18]
+[37]     0.1    0.01    0.00  328000         get_free_recv_idx [37]
+-----------------------------------------------
+                0.01    0.00  162166/162166      server_wait_completions [10]
+[38]     0.1    0.01    0.00  162166         free_send_buffer [38]
+                0.00    0.00  162166/324333      get_send_buffer [50]
+                0.00    0.00  162166/162166      release_send_buffer [57]
+-----------------------------------------------
+                0.01    0.00       1/1           server_pending_request_destroy [34]
+[39]     0.1    0.01    0.00       1         clear_preallocated_buffers [39]
+-----------------------------------------------
+                0.00    0.00       1/1           teardown_server_connection [33]
+[40]     0.0    0.00    0.00       1         server_close_ctx [40]
+                0.00    0.00       1/4           remove_connection [35]
+                0.00    0.00       1/1           send_server_shutdown_message [70]
+-----------------------------------------------
+                0.00    0.00       4/4           query_for_connections [20]
+[41]     0.0    0.00    0.00       4         handle_received_connection_data [41]
+                0.00    0.00       4/364         server_post_recv_buffers [18]
+                0.00    0.00       4/4           create_new_qp [61]
+                0.00    0.00       4/4           wire_gid_to_gid [64]
+                0.00    0.00       4/4           connect_ctx [60]
+                0.00    0.00       4/4           gid_to_wire_gid [62]
+                0.00    0.00       4/4           add_new_connection [59]
+                0.00    0.00       4/4           send_address_back_to_client [63]
+-----------------------------------------------
+                0.00    0.00       3/3           remove_connection [35]
+[42]     0.0    0.00    0.00       3         invalidate_requests_by_qp [42]
+                0.00    0.00      76/312002      remove_server_pending_request [22]
+-----------------------------------------------
+                0.00    0.00       1/1           init_server_connection [31]
+[43]     0.0    0.00    0.00       1         server_pending_requests_init [43]
+                0.00    0.00       1/46506       get_empty_buffer [27]
+-----------------------------------------------
+                0.00    0.00 1063531/1063531     handle_get_request [9]
+[44]     0.0    0.00    0.00 1063531         db_entry_lock_rd [44]
+-----------------------------------------------
+                0.00    0.00  326034/654034      handle_recv_request [12]
+                0.00    0.00  328000/654034      server_post_recv [19]
+[45]     0.0    0.00    0.00  654034         get_recv_buffer [45]
+-----------------------------------------------
+                0.00    0.00   11377/337411      remove_connection [35]
+                0.00    0.00  326034/337411      server_wait_completions [10]
+[46]     0.0    0.00    0.00  337411         release_receive_buffer [46]
+-----------------------------------------------
+                0.00    0.00  328000/328000      server_post_recv [19]
+[47]     0.0    0.00    0.00  328000         acquire_receive_buffer [47]
+-----------------------------------------------
+                0.00    0.00  328000/328000      server_post_recv [19]
+[48]     0.0    0.00    0.00  328000         ibv_post_recv [48]
+-----------------------------------------------
+                0.00    0.00       4/326038      remove_connection [35]
+                0.00    0.00  326034/326038      handle_recv_request [12]
+[49]     0.0    0.00    0.00  326038         get_connection [49]
+-----------------------------------------------
+                0.00    0.00  162166/324333      free_send_buffer [38]
+                0.00    0.00  162167/324333      get_free_send_buffer [53]
+[50]     0.0    0.00    0.00  324333         get_send_buffer [50]
+-----------------------------------------------
+                0.00    0.00   29757/296112      mark_rdma_fin_received [26]
+                0.00    0.00  132406/296112      handle_get_request [9]
+                0.00    0.00  133949/296112      handle_set_request [5]
+[51]     0.0    0.00    0.00  296112         db_entry_unlock [51]
+-----------------------------------------------
+                0.00    0.00  162167/162167      get_free_send_buffer [53]
+[52]     0.0    0.00    0.00  162167         acquire_send_buffer [52]
+-----------------------------------------------
+                0.00    0.00       1/162167      send_server_shutdown_message [70]
+                0.00    0.00   14029/162167      handle_set_request [5]
+                0.00    0.00  148137/162167      handle_get_request [9]
+[53]     0.0    0.00    0.00  162167         get_free_send_buffer [53]
+                0.00    0.00  162167/162167      get_free_send_idx [54]
+                0.00    0.00  162167/324333      get_send_buffer [50]
+                0.00    0.00  162167/162167      acquire_send_buffer [52]
+-----------------------------------------------
+                0.00    0.00  162167/162167      get_free_send_buffer [53]
+[54]     0.0    0.00    0.00  162167         get_free_send_idx [54]
+-----------------------------------------------
+                0.00    0.00  162167/162167      server_post_send [56]
+[55]     0.0    0.00    0.00  162167         ibv_post_send [55]
+-----------------------------------------------
+                0.00    0.00       1/162167      send_server_shutdown_message [70]
+                0.00    0.00   14029/162167      handle_set_request [5]
+                0.00    0.00  148137/162167      handle_get_request [9]
+[56]     0.0    0.00    0.00  162167         server_post_send [56]
+                0.00    0.00  162167/162167      ibv_post_send [55]
+-----------------------------------------------
+                0.00    0.00  162166/162166      free_send_buffer [38]
+[57]     0.0    0.00    0.00  162166         release_send_buffer [57]
+-----------------------------------------------
+                0.00    0.00       1/52          db_init [32]
+                0.00    0.00      51/52          db_insert [16]
+[58]     0.0    0.00    0.00      52         get_empty_buffer [58]
+                0.00    0.00       1/1           reallocate_entries [69]
+-----------------------------------------------
+                0.00    0.00       4/4           handle_received_connection_data [41]
+[59]     0.0    0.00    0.00       4         add_new_connection [59]
+-----------------------------------------------
+                0.00    0.00       4/4           handle_received_connection_data [41]
+[60]     0.0    0.00    0.00       4         connect_ctx [60]
+-----------------------------------------------
+                0.00    0.00       4/4           handle_received_connection_data [41]
+[61]     0.0    0.00    0.00       4         create_new_qp [61]
+-----------------------------------------------
+                0.00    0.00       4/4           handle_received_connection_data [41]
+[62]     0.0    0.00    0.00       4         gid_to_wire_gid [62]
+-----------------------------------------------
+                0.00    0.00       4/4           handle_received_connection_data [41]
+[63]     0.0    0.00    0.00       4         send_address_back_to_client [63]
+-----------------------------------------------
+                0.00    0.00       4/4           handle_received_connection_data [41]
+[64]     0.0    0.00    0.00       4         wire_gid_to_gid [64]
+-----------------------------------------------
+                0.00    0.00       1/1           db_destroy [67]
+[65]     0.0    0.00    0.00       1         clear_preallocated_buffers [65]
+-----------------------------------------------
+                0.00    0.00       1/1           accept_new_connection [11]
+[66]     0.0    0.00    0.00       1         create_listen_socket [66]
+-----------------------------------------------
+                0.00    0.00       1/1           teardown_server_connection [33]
+[67]     0.0    0.00    0.00       1         db_destroy [67]
+                0.00    0.00       1/1           clear_preallocated_buffers [65]
+-----------------------------------------------
+                0.00    0.00       1/1           init_server_connection [31]
+[68]     0.0    0.00    0.00       1         get_port_info [68]
+                0.00    0.00       1/1           ___ibv_query_port [128]
+-----------------------------------------------
+                0.00    0.00       1/1           get_empty_buffer [58]
+[69]     0.0    0.00    0.00       1         reallocate_entries [69]
+-----------------------------------------------
+                0.00    0.00       1/1           server_close_ctx [40]
+[70]     0.0    0.00    0.00       1         send_server_shutdown_message [70]
+                0.00    0.00       1/162167      get_free_send_buffer [53]
+                0.00    0.00       1/162167      server_post_send [56]
+-----------------------------------------------
+                0.00    0.00       1/1           init_server_connection [31]
+[71]     0.0    0.00    0.00       1         server_init_ctx [71]
+-----------------------------------------------
+                0.00    0.00       1/1           ___ibv_query_port [128]
+[72]     0.0    0.00    0.00       1         verbs_get_ctx [72]
+-----------------------------------------------
+                0.00    0.00       1/1           get_port_info [68]
+[128]    0.0    0.00    0.00       1         ___ibv_query_port [128]
+                0.00    0.00       1/1           verbs_get_ctx [72]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+ [128] ___ibv_query_port      [53] get_free_send_buffer    [7] push_pending_request
+  [11] accept_new_connection  [54] get_free_send_idx      [20] query_for_connections
+  [47] acquire_receive_buffer [68] get_port_info          [69] reallocate_entries
+  [52] acquire_send_buffer    [45] get_recv_buffer        [28] reallocate_entries
+  [59] add_new_connection     [50] get_send_buffer        [46] release_receive_buffer
+  [25] add_server_pending_request [8] get_server_pending_request [57] release_send_buffer
+  [14] check_available_connection_slots [62] gid_to_wire_gid [35] remove_connection
+  [65] clear_preallocated_buffers [9] handle_get_request  [22] remove_server_pending_request
+  [39] clear_preallocated_buffers [4] handle_pending_request [36] request_compare
+  [60] connect_ctx            [41] handle_received_connection_data [63] send_address_back_to_client
+  [66] create_listen_socket   [12] handle_recv_request    [70] send_server_shutdown_message
+  [61] create_new_qp           [5] handle_set_request     [40] server_close_ctx
+  [67] db_destroy             [21] ibv_poll_cq            [71] server_init_ctx
+  [44] db_entry_lock_rd       [48] ibv_post_recv           [3] server_loop
+  [29] db_entry_lock_wr       [55] ibv_post_send          [34] server_pending_request_destroy
+  [51] db_entry_unlock        [31] init_server_connection [43] server_pending_requests_init
+   [6] db_get                 [42] invalidate_requests_by_qp [19] server_post_recv
+  [32] db_init                 [1] main                   [18] server_post_recv_buffers
+  [16] db_insert               [2] main_loop              [56] server_post_send
+  [23] db_reallocate_item     [26] mark_rdma_fin_received [10] server_wait_completions
+  [38] free_send_buffer       [24] mark_rdma_fin_required [33] teardown_server_connection
+  [49] get_connection         [13] pending_req_count      [72] verbs_get_ctx
+  [58] get_empty_buffer       [15] pop_pending_request    [64] wire_gid_to_gid
+  [27] get_empty_buffer       [17] push_back_pending_request
+  [37] get_free_recv_idx      [30] push_front_pending_request
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 72.49     10.66    10.66 25672599     0.00     0.00  db_get
+  8.84     11.96     1.30    16745     0.08     0.08  add_server_pending_request
+  2.86     12.38     0.42 25051683     0.00     0.00  get_server_pending_request
+  2.79     12.79     0.41 46922317     0.00     0.00  server_pending_request_destroy
+  2.07     13.09     0.31   134000     0.00     0.00  db_insert
+  1.94     13.38     0.29 21904102     0.00     0.00  handle_pending_request
+  1.22     13.56     0.18 50069717     0.00     0.00  pop_pending_request
+  0.95     13.70     0.14        1   140.01   140.01  init_server_connection
+  0.85     13.82     0.13 21904102     0.00     0.00  server_wait_completions
+  0.82     13.94     0.12 24267522     0.00     0.00  handle_set_request
+  0.54     14.02     0.08   328000     0.00     0.00  server_post_recv
+  0.48     14.09     0.07 21904102     0.00     0.00  check_available_connection_slots
+  0.48     14.16     0.07 21904102     0.00     0.00  ibv_poll_cq
+  0.48     14.23     0.07   310492     0.00     0.00  query_for_connections
+  0.41     14.29     0.06                             push_back_pending_request
+  0.34     14.34     0.05                             signal_handler
+  0.27     14.38     0.04 21904102     0.00     0.00  accept_new_connection
+  0.27     14.42     0.04   341759     0.00     0.00  mark_rdma_fin_received
+  0.20     14.45     0.03                             push_front_pending_request
+  0.20     14.48     0.03        1    30.00   856.26  server_loop
+  0.20     14.51     0.03                             clear_preallocated_buffers
+  0.14     14.53     0.02 25331053     0.00     0.00  db_entry_unlock
+  0.14     14.55     0.02  2139397     0.00     0.00  server_pending_requests_init
+  0.14     14.57     0.02  1063531     0.00     0.00  handle_get_request
+  0.14     14.59     0.02   326034     0.00     0.00  handle_recv_request
+  0.14     14.61     0.02    29760     0.00     0.00  mark_rdma_fin_required
+  0.14     14.63     0.02                             pending_req_count
+  0.07     14.64     0.01   312002     0.00     0.00  remove_server_pending_request
+  0.07     14.65     0.01   162167     0.00     0.00  get_port_info
+  0.07     14.66     0.01   162166     0.00     0.00  free_send_buffer
+  0.07     14.67     0.01    14029     0.00     0.01  db_reallocate_item
+  0.07     14.68     0.01        4     2.50     2.50  remove_connection
+  0.07     14.69     0.01                             ibv_poll_cq
+  0.07     14.70     0.01                             main
+  0.00     14.70     0.00   654034     0.00     0.00  get_recv_buffer
+  0.00     14.70     0.00   337411     0.00     0.00  release_receive_buffer
+  0.00     14.70     0.00   328000     0.00     0.00  acquire_receive_buffer
+  0.00     14.70     0.00   328000     0.00     0.00  get_free_send_idx
+  0.00     14.70     0.00   328000     0.00     0.00  ibv_post_recv
+  0.00     14.70     0.00   326038     0.00     0.00  get_connection
+  0.00     14.70     0.00   324333     0.00     0.00  get_send_buffer
+  0.00     14.70     0.00   296112     0.00     0.00  client_pending_requests_init
+  0.00     14.70     0.00   162167     0.00     0.00  acquire_send_buffer
+  0.00     14.70     0.00   162167     0.00     0.00  get_free_send_buffer
+  0.00     14.70     0.00   162167     0.00     0.00  ibv_post_send
+  0.00     14.70     0.00   162167     0.00     0.00  server_post_send
+  0.00     14.70     0.00   162166     0.00     0.00  release_send_buffer
+  0.00     14.70     0.00      364     0.00     0.22  server_post_recv_buffers
+  0.00     14.70     0.00       53     0.00     0.00  clear_preallocated_buffers
+  0.00     14.70     0.00        8     0.00     0.00  connect_ctx
+  0.00     14.70     0.00        5     0.00     0.00  gid_to_wire_gid
+  0.00     14.70     0.00        4     0.00     0.63  add_new_connection
+  0.00     14.70     0.00        4     0.00     0.00  create_new_qp
+  0.00     14.70     0.00        4     0.00     0.85  handle_received_connection_data
+  0.00     14.70     0.00        4     0.00     0.00  send_address_back_to_client
+  0.00     14.70     0.00        3     0.00     0.01  kv_test_client_side
+  0.00     14.70     0.00        1     0.00     0.00  ___ibv_query_port
+  0.00     14.70     0.00        1     0.00     0.00  create_listen_socket
+  0.00     14.70     0.00        1     0.00     0.00  db_destroy
+  0.00     14.70     0.00        1     0.00     0.00  db_init
+  0.00     14.70     0.00        1     0.00     0.00  get_free_recv_idx
+  0.00     14.70     0.00        1     0.00   856.26  main_loop
+  0.00     14.70     0.00        1     0.00     0.00  reallocate_entries
+  0.00     14.70     0.00        1     0.00     0.00  reallocate_entries
+  0.00     14.70     0.00        1     0.00     0.00  send_server_shutdown_message
+  0.00     14.70     0.00        1     0.00     2.50  server_close_ctx
+  0.00     14.70     0.00        1     0.00     0.00  server_init_ctx
+  0.00     14.70     0.00        1     0.00     0.00  teardown_server_connection
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.07% of 14.70 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     92.8    0.01   13.63                 ibv_poll_cq [1]
+                0.29   13.35 21904102/21904102     handle_pending_request [2]
+                0.00    0.00       1/1           teardown_server_connection [43]
+-----------------------------------------------
+                0.29   13.35 21904102/21904102     ibv_poll_cq [1]
+[2]     92.7    0.29   13.35 21904102         handle_pending_request [2]
+                0.12   11.50 24119385/24267522     handle_set_request [3]
+                0.09    0.97 25034779/50069717     pop_pending_request [5]
+                0.02    0.46  915394/1063531     handle_get_request [10]
+                0.19    0.00 21904123/46922317     server_pending_request_destroy [13]
+-----------------------------------------------
+                0.00    0.07  148137/24267522     handle_recv_request [15]
+                0.12   11.50 24119385/24267522     handle_pending_request [2]
+[3]     79.5    0.12   11.57 24267522         handle_set_request [3]
+               10.07    0.00 24267573/25672599     db_get [4]
+                0.09    0.93 24119544/50069717     pop_pending_request [5]
+                0.31    0.06  134000/134000      db_insert [14]
+                0.01    0.06   14029/14029       db_reallocate_item [21]
+                0.00    0.02  133949/312002      remove_server_pending_request [24]
+                0.02    0.00 24267522/25331053     db_entry_unlock [31]
+                0.00    0.00   14029/162167      get_free_send_buffer [35]
+                0.00    0.00  162167/162167      ibv_post_send [53]
+                0.00    0.00  133949/296112      client_pending_requests_init [51]
+                0.00    0.00   14029/162167      server_post_send [54]
+-----------------------------------------------
+                0.01    0.00   29757/25672599     handle_recv_request [15]
+                0.01    0.00   29760/25672599     mark_rdma_fin_required [28]
+                0.06    0.00  134000/25672599     db_insert [14]
+                0.06    0.00  147978/25672599     db_reallocate_item [21]
+                0.44    0.00 1063531/25672599     handle_get_request [10]
+               10.07    0.00 24267573/25672599     handle_set_request [3]
+[4]     72.5   10.66    0.00 25672599         db_get [4]
+-----------------------------------------------
+                0.00    0.04  915394/50069717     handle_get_request [10]
+                0.09    0.93 24119544/50069717     handle_set_request [3]
+                0.09    0.97 25034779/50069717     handle_pending_request [2]
+[5]     14.4    0.18    1.94 50069717         pop_pending_request [5]
+                1.30    0.00   16745/16745       add_server_pending_request [6]
+                0.42    0.00 25051683/25051683     get_server_pending_request [12]
+                0.22    0.00 25018193/46922317     server_pending_request_destroy [13]
+-----------------------------------------------
+                1.30    0.00   16745/16745       pop_pending_request [5]
+[6]      8.8    1.30    0.00   16745         add_server_pending_request [6]
+                0.00    0.00   16745/2139397     server_pending_requests_init [32]
+-----------------------------------------------
+                                                 <spontaneous>
+[7]      5.9    0.01    0.86                 main [7]
+                0.00    0.86       1/1           main_loop [8]
+-----------------------------------------------
+                0.00    0.86       1/1           main [7]
+[8]      5.8    0.00    0.86       1         main_loop [8]
+                0.03    0.83       1/1           server_loop [9]
+-----------------------------------------------
+                0.03    0.83       1/1           main_loop [8]
+[9]      5.8    0.03    0.83       1         server_loop [9]
+                0.13    0.38 21904102/21904102     server_wait_completions [11]
+                0.04    0.14 21904102/21904102     accept_new_connection [16]
+                0.14    0.00       1/1           init_server_connection [17]
+-----------------------------------------------
+                0.00    0.07  148137/1063531     handle_recv_request [15]
+                0.02    0.46  915394/1063531     handle_pending_request [2]
+[10]     3.8    0.02    0.53 1063531         handle_get_request [10]
+                0.44    0.00 1063531/25672599     db_get [4]
+                0.00    0.04  915394/50069717     pop_pending_request [5]
+                0.00    0.02  132406/312002      remove_server_pending_request [24]
+                0.01    0.01   14029/29760       mark_rdma_fin_required [28]
+                0.00    0.01  148137/162167      get_free_send_buffer [35]
+                0.00    0.00 1063531/25331053     db_entry_unlock [31]
+                0.00    0.00  148137/162167      server_post_send [54]
+                0.00    0.00  132406/296112      client_pending_requests_init [51]
+-----------------------------------------------
+                0.13    0.38 21904102/21904102     server_loop [9]
+[11]     3.4    0.13    0.38 21904102         server_wait_completions [11]
+                0.02    0.28  326034/326034      handle_recv_request [15]
+                0.07    0.00 21904102/21904102     ibv_poll_cq [23]
+                0.01    0.00  162166/162166      free_send_buffer [37]
+                0.00    0.00       1/4           remove_connection [34]
+                0.00    0.00  326034/337411      release_receive_buffer [45]
+-----------------------------------------------
+                0.42    0.00 25051683/25051683     pop_pending_request [5]
+[12]     2.9    0.42    0.00 25051683         get_server_pending_request [12]
+-----------------------------------------------
+                0.00    0.00       1/46922317     teardown_server_connection [43]
+                0.19    0.00 21904123/46922317     handle_pending_request [2]
+                0.22    0.00 25018193/46922317     pop_pending_request [5]
+[13]     2.8    0.41    0.00 46922317         server_pending_request_destroy [13]
+                0.00    0.00      83/312002      remove_server_pending_request [24]
+-----------------------------------------------
+                0.31    0.06  134000/134000      handle_set_request [3]
+[14]     2.5    0.31    0.06  134000         db_insert [14]
+                0.06    0.00  134000/25672599     db_get [4]
+                0.00    0.00      51/53          clear_preallocated_buffers [56]
+-----------------------------------------------
+                0.02    0.28  326034/326034      server_wait_completions [11]
+[15]     2.0    0.02    0.28  326034         handle_recv_request [15]
+                0.00    0.08     360/364         server_post_recv_buffers [19]
+                0.00    0.07  148137/1063531     handle_get_request [10]
+                0.00    0.07  148137/24267522     handle_set_request [3]
+                0.01    0.01   15731/29760       mark_rdma_fin_required [28]
+                0.01    0.00   29757/25672599     db_get [4]
+                0.00    0.01   45488/312002      remove_server_pending_request [24]
+                0.01    0.00       2/4           remove_connection [34]
+                0.00    0.00   29757/341759      mark_rdma_fin_received [27]
+                0.00    0.00  326034/326038      get_connection [49]
+                0.00    0.00  326034/654034      get_recv_buffer [44]
+-----------------------------------------------
+                0.04    0.14 21904102/21904102     server_loop [9]
+[16]     1.2    0.04    0.14 21904102         accept_new_connection [16]
+                0.07    0.00  310492/310492      query_for_connections [20]
+                0.07    0.00 21904102/21904102     check_available_connection_slots [22]
+                0.00    0.00       1/1           create_listen_socket [61]
+-----------------------------------------------
+                0.14    0.00       1/1           server_loop [9]
+[17]     1.0    0.14    0.00       1         init_server_connection [17]
+                0.00    0.00       1/2139397     server_pending_requests_init [32]
+                0.00    0.00       1/1           server_init_ctx [67]
+                0.00    0.00       1/1           db_init [63]
+                0.00    0.00       1/5           gid_to_wire_gid [58]
+-----------------------------------------------
+                0.08    0.00  328000/328000      server_post_recv_buffers [19]
+[18]     0.5    0.08    0.00  328000         server_post_recv [18]
+                0.00    0.00  328000/654034      get_recv_buffer [44]
+-----------------------------------------------
+                0.00    0.00       4/364         handle_received_connection_data [38]
+                0.00    0.08     360/364         handle_recv_request [15]
+[19]     0.5    0.00    0.08     364         server_post_recv_buffers [19]
+                0.08    0.00  328000/328000      server_post_recv [18]
+                0.00    0.00  328000/328000      ibv_post_recv [48]
+                0.00    0.00  328000/328000      acquire_receive_buffer [46]
+                0.00    0.00  328000/328000      get_free_send_idx [47]
+-----------------------------------------------
+                0.07    0.00  310492/310492      accept_new_connection [16]
+[20]     0.5    0.07    0.00  310492         query_for_connections [20]
+                0.00    0.00       4/4           handle_received_connection_data [38]
+-----------------------------------------------
+                              133949             db_reallocate_item [21]
+                0.01    0.06   14029/14029       handle_set_request [3]
+[21]     0.5    0.01    0.06   14029+133949  db_reallocate_item [21]
+                0.06    0.00  147978/25672599     db_get [4]
+                              133949             db_reallocate_item [21]
+-----------------------------------------------
+                0.07    0.00 21904102/21904102     accept_new_connection [16]
+[22]     0.5    0.07    0.00 21904102         check_available_connection_slots [22]
+-----------------------------------------------
+                0.07    0.00 21904102/21904102     server_wait_completions [11]
+[23]     0.5    0.07    0.00 21904102         ibv_poll_cq [23]
+-----------------------------------------------
+                0.00    0.00      76/312002      kv_test_client_side [41]
+                0.00    0.00      83/312002      server_pending_request_destroy [13]
+                0.00    0.01   45488/312002      handle_recv_request [15]
+                0.00    0.02  132406/312002      handle_get_request [10]
+                0.00    0.02  133949/312002      handle_set_request [3]
+[24]     0.4    0.01    0.06  312002         remove_server_pending_request [24]
+                0.04    0.00  312002/341759      mark_rdma_fin_received [27]
+                0.02    0.00 2092890/2139397     server_pending_requests_init [32]
+-----------------------------------------------
+                                                 <spontaneous>
+[25]     0.4    0.06    0.00                 push_back_pending_request [25]
+-----------------------------------------------
+                                                 <spontaneous>
+[26]     0.3    0.05    0.00                 signal_handler [26]
+-----------------------------------------------
+                0.00    0.00   29757/341759      handle_recv_request [15]
+                0.04    0.00  312002/341759      remove_server_pending_request [24]
+[27]     0.3    0.04    0.00  341759         mark_rdma_fin_received [27]
+                0.00    0.00   29757/296112      client_pending_requests_init [51]
+-----------------------------------------------
+                0.01    0.01   14029/29760       handle_get_request [10]
+                0.01    0.01   15731/29760       handle_recv_request [15]
+[28]     0.2    0.02    0.01   29760         mark_rdma_fin_required [28]
+                0.01    0.00   29760/25672599     db_get [4]
+                0.00    0.00   29761/2139397     server_pending_requests_init [32]
+-----------------------------------------------
+                                                 <spontaneous>
+[29]     0.2    0.03    0.00                 push_front_pending_request [29]
+-----------------------------------------------
+                                                 <spontaneous>
+[30]     0.2    0.03    0.00                 clear_preallocated_buffers [30]
+-----------------------------------------------
+                0.00    0.00 1063531/25331053     handle_get_request [10]
+                0.02    0.00 24267522/25331053     handle_set_request [3]
+[31]     0.1    0.02    0.00 25331053         db_entry_unlock [31]
+-----------------------------------------------
+                                   1             server_pending_requests_init [32]
+                0.00    0.00       1/2139397     init_server_connection [17]
+                0.00    0.00   16745/2139397     add_server_pending_request [6]
+                0.00    0.00   29761/2139397     mark_rdma_fin_required [28]
+                0.02    0.00 2092890/2139397     remove_server_pending_request [24]
+[32]     0.1    0.02    0.00 2139397+1       server_pending_requests_init [32]
+                0.00    0.00       1/1           reallocate_entries [66]
+                                   1             server_pending_requests_init [32]
+-----------------------------------------------
+                                                 <spontaneous>
+[33]     0.1    0.02    0.00                 pending_req_count [33]
+-----------------------------------------------
+                0.00    0.00       1/4           server_close_ctx [40]
+                0.00    0.00       1/4           server_wait_completions [11]
+                0.01    0.00       2/4           handle_recv_request [15]
+[34]     0.1    0.01    0.00       4         remove_connection [34]
+                0.00    0.00       3/3           kv_test_client_side [41]
+                0.00    0.00   11377/337411      release_receive_buffer [45]
+                0.00    0.00       4/326038      get_connection [49]
+-----------------------------------------------
+                0.00    0.00       1/162167      send_server_shutdown_message [42]
+                0.00    0.00   14029/162167      handle_set_request [3]
+                0.00    0.01  148137/162167      handle_get_request [10]
+[35]     0.1    0.00    0.01  162167         get_free_send_buffer [35]
+                0.01    0.00  162167/162167      get_port_info [36]
+                0.00    0.00  162167/324333      get_send_buffer [50]
+                0.00    0.00  162167/162167      acquire_send_buffer [52]
+-----------------------------------------------
+                0.01    0.00  162167/162167      get_free_send_buffer [35]
+[36]     0.1    0.01    0.00  162167         get_port_info [36]
+-----------------------------------------------
+                0.01    0.00  162166/162166      server_wait_completions [11]
+[37]     0.1    0.01    0.00  162166         free_send_buffer [37]
+                0.00    0.00  162166/324333      get_send_buffer [50]
+                0.00    0.00  162166/162166      release_send_buffer [55]
+-----------------------------------------------
+                0.00    0.00       4/4           query_for_connections [20]
+[38]     0.0    0.00    0.00       4         handle_received_connection_data [38]
+                0.00    0.00       4/4           add_new_connection [39]
+                0.00    0.00       4/364         server_post_recv_buffers [19]
+                0.00    0.00       8/8           connect_ctx [57]
+                0.00    0.00       4/4           create_new_qp [59]
+                0.00    0.00       4/5           gid_to_wire_gid [58]
+                0.00    0.00       4/4           send_address_back_to_client [60]
+-----------------------------------------------
+                0.00    0.00       4/4           handle_received_connection_data [38]
+[39]     0.0    0.00    0.00       4         add_new_connection [39]
+                0.00    0.00       1/1           server_close_ctx [40]
+-----------------------------------------------
+                0.00    0.00       1/1           add_new_connection [39]
+[40]     0.0    0.00    0.00       1         server_close_ctx [40]
+                0.00    0.00       1/4           remove_connection [34]
+                0.00    0.00       1/1           send_server_shutdown_message [42]
+                0.00    0.00       1/162167      server_post_send [54]
+-----------------------------------------------
+                0.00    0.00       3/3           remove_connection [34]
+[41]     0.0    0.00    0.00       3         kv_test_client_side [41]
+                0.00    0.00      76/312002      remove_server_pending_request [24]
+-----------------------------------------------
+                0.00    0.00       1/1           server_close_ctx [40]
+[42]     0.0    0.00    0.00       1         send_server_shutdown_message [42]
+                0.00    0.00       1/162167      get_free_send_buffer [35]
+-----------------------------------------------
+                0.00    0.00       1/1           ibv_poll_cq [1]
+[43]     0.0    0.00    0.00       1         teardown_server_connection [43]
+                0.00    0.00       1/46922317     server_pending_request_destroy [13]
+                0.00    0.00       1/1           db_destroy [62]
+-----------------------------------------------
+                0.00    0.00  326034/654034      handle_recv_request [15]
+                0.00    0.00  328000/654034      server_post_recv [18]
+[44]     0.0    0.00    0.00  654034         get_recv_buffer [44]
+-----------------------------------------------
+                0.00    0.00   11377/337411      remove_connection [34]
+                0.00    0.00  326034/337411      server_wait_completions [11]
+[45]     0.0    0.00    0.00  337411         release_receive_buffer [45]
+-----------------------------------------------
+                0.00    0.00  328000/328000      server_post_recv_buffers [19]
+[46]     0.0    0.00    0.00  328000         acquire_receive_buffer [46]
+-----------------------------------------------
+                0.00    0.00  328000/328000      server_post_recv_buffers [19]
+[47]     0.0    0.00    0.00  328000         get_free_send_idx [47]
+-----------------------------------------------
+                0.00    0.00  328000/328000      server_post_recv_buffers [19]
+[48]     0.0    0.00    0.00  328000         ibv_post_recv [48]
+-----------------------------------------------
+                0.00    0.00       4/326038      remove_connection [34]
+                0.00    0.00  326034/326038      handle_recv_request [15]
+[49]     0.0    0.00    0.00  326038         get_connection [49]
+-----------------------------------------------
+                0.00    0.00  162166/324333      free_send_buffer [37]
+                0.00    0.00  162167/324333      get_free_send_buffer [35]
+[50]     0.0    0.00    0.00  324333         get_send_buffer [50]
+-----------------------------------------------
+                0.00    0.00   29757/296112      mark_rdma_fin_received [27]
+                0.00    0.00  132406/296112      handle_get_request [10]
+                0.00    0.00  133949/296112      handle_set_request [3]
+[51]     0.0    0.00    0.00  296112         client_pending_requests_init [51]
+-----------------------------------------------
+                0.00    0.00  162167/162167      get_free_send_buffer [35]
+[52]     0.0    0.00    0.00  162167         acquire_send_buffer [52]
+-----------------------------------------------
+                0.00    0.00  162167/162167      handle_set_request [3]
+[53]     0.0    0.00    0.00  162167         ibv_post_send [53]
+-----------------------------------------------
+                0.00    0.00       1/162167      server_close_ctx [40]
+                0.00    0.00   14029/162167      handle_set_request [3]
+                0.00    0.00  148137/162167      handle_get_request [10]
+[54]     0.0    0.00    0.00  162167         server_post_send [54]
+-----------------------------------------------
+                0.00    0.00  162166/162166      free_send_buffer [37]
+[55]     0.0    0.00    0.00  162166         release_send_buffer [55]
+-----------------------------------------------
+                0.00    0.00       1/53          db_init [63]
+                0.00    0.00       1/53          db_entry_lock_wr [88]
+                0.00    0.00      51/53          db_insert [14]
+[56]     0.0    0.00    0.00      53         clear_preallocated_buffers [56]
+                0.00    0.00       1/1           reallocate_entries [65]
+-----------------------------------------------
+                0.00    0.00       8/8           handle_received_connection_data [38]
+[57]     0.0    0.00    0.00       8         connect_ctx [57]
+-----------------------------------------------
+                0.00    0.00       1/5           init_server_connection [17]
+                0.00    0.00       4/5           handle_received_connection_data [38]
+[58]     0.0    0.00    0.00       5         gid_to_wire_gid [58]
+                0.00    0.00       1/1           get_free_recv_idx [64]
+-----------------------------------------------
+                0.00    0.00       4/4           handle_received_connection_data [38]
+[59]     0.0    0.00    0.00       4         create_new_qp [59]
+-----------------------------------------------
+                0.00    0.00       4/4           handle_received_connection_data [38]
+[60]     0.0    0.00    0.00       4         send_address_back_to_client [60]
+-----------------------------------------------
+                0.00    0.00       1/1           accept_new_connection [16]
+[61]     0.0    0.00    0.00       1         create_listen_socket [61]
+-----------------------------------------------
+                0.00    0.00       1/1           teardown_server_connection [43]
+[62]     0.0    0.00    0.00       1         db_destroy [62]
+-----------------------------------------------
+                0.00    0.00       1/1           init_server_connection [17]
+[63]     0.0    0.00    0.00       1         db_init [63]
+                0.00    0.00       1/53          clear_preallocated_buffers [56]
+-----------------------------------------------
+                0.00    0.00       1/1           gid_to_wire_gid [58]
+[64]     0.0    0.00    0.00       1         get_free_recv_idx [64]
+                0.00    0.00       1/1           ___ibv_query_port [128]
+-----------------------------------------------
+                0.00    0.00       1/1           clear_preallocated_buffers [56]
+[65]     0.0    0.00    0.00       1         reallocate_entries [65]
+-----------------------------------------------
+                0.00    0.00       1/1           server_pending_requests_init [32]
+[66]     0.0    0.00    0.00       1         reallocate_entries [66]
+-----------------------------------------------
+                0.00    0.00       1/1           init_server_connection [17]
+[67]     0.0    0.00    0.00       1         server_init_ctx [67]
+-----------------------------------------------
+                0.00    0.00       1/1           get_free_recv_idx [64]
+[128]    0.0    0.00    0.00       1         ___ibv_query_port [128]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+ [128] ___ibv_query_port      [47] get_free_send_idx      [25] push_back_pending_request
+  [16] accept_new_connection  [36] get_port_info          [29] push_front_pending_request
+  [46] acquire_receive_buffer [44] get_recv_buffer        [20] query_for_connections
+  [52] acquire_send_buffer    [50] get_send_buffer        [65] reallocate_entries
+  [39] add_new_connection     [12] get_server_pending_request [66] reallocate_entries
+   [6] add_server_pending_request [58] gid_to_wire_gid    [45] release_receive_buffer
+  [22] check_available_connection_slots [10] handle_get_request [55] release_send_buffer
+  [56] clear_preallocated_buffers [2] handle_pending_request [34] remove_connection
+  [30] clear_preallocated_buffers [38] handle_received_connection_data [24] remove_server_pending_request
+  [51] client_pending_requests_init [15] handle_recv_request [60] send_address_back_to_client
+  [57] connect_ctx             [3] handle_set_request     [42] send_server_shutdown_message
+  [61] create_listen_socket   [23] ibv_poll_cq            [40] server_close_ctx
+  [59] create_new_qp           [1] ibv_poll_cq            [67] server_init_ctx
+  [62] db_destroy             [48] ibv_post_recv           [9] server_loop
+  [31] db_entry_unlock        [53] ibv_post_send          [13] server_pending_request_destroy
+   [4] db_get                 [17] init_server_connection [32] server_pending_requests_init
+  [63] db_init                [41] kv_test_client_side    [18] server_post_recv
+  [14] db_insert               [7] main                   [19] server_post_recv_buffers
+  [21] db_reallocate_item      [8] main_loop              [54] server_post_send
+  [37] free_send_buffer       [27] mark_rdma_fin_received [11] server_wait_completions
+  [49] get_connection         [28] mark_rdma_fin_required [26] signal_handler
+  [64] get_free_recv_idx      [33] pending_req_count      [43] teardown_server_connection
+  [35] get_free_send_buffer    [5] pop_pending_request

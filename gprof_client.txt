@@ -1,0 +1,371 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 58.29      1.16     1.16    49444     0.00     0.00  client_wait_completions
+ 34.68      1.85     0.69 414018351     0.00     0.00  ibv_poll_cq
+  3.52      1.92     0.07                             server_loop
+  1.51      1.95     0.03        1     0.03     0.03  client_exch_dest
+  1.01      1.97     0.02     6845     0.00     0.00  client_handle_recv_rdma_rkey_get
+  0.50      1.98     0.01    54511     0.00     0.00  get_client_pending_request
+  0.50      1.99     0.01     6846     0.00     0.00  kv_set
+  0.00      1.99     0.00    40904     0.00     0.00  ibv_post_send
+  0.00      1.99     0.00    27298     0.00     0.00  get_free_send_idx
+  0.00      1.99     0.00    27297     0.00     0.00  client_post_send
+  0.00      1.99     0.00    15967     0.00     0.00  client_post_recv
+  0.00      1.99     0.00    15967     0.00     0.00  get_free_recv_idx
+  0.00      1.99     0.00    15967     0.00     0.00  ibv_post_recv
+  0.00      1.99     0.00    13691     0.00     0.00  add_client_pending_request
+  0.00      1.99     0.00    13691     0.00     0.00  get_new_tid
+  0.00      1.99     0.00    13607     0.00     0.00  client_handle_recv
+  0.00      1.99     0.00    13607     0.00     0.00  client_send_rdma_fin
+  0.00      1.99     0.00    13607     0.00     0.00  remove_client_pending_request
+  0.00      1.99     0.00     6846     0.00     0.00  num_pending_requests
+  0.00      1.99     0.00     6845     0.00     0.00  client_post_rdma_read
+  0.00      1.99     0.00     6845     0.00     0.00  kv_get
+  0.00      1.99     0.00     6845     0.00     0.00  kv_release
+  0.00      1.99     0.00     6762     0.00     0.00  client_handle_recv_rdma_rkey_set
+  0.00      1.99     0.00     6762     0.00     0.00  client_post_rdma_write
+  0.00      1.99     0.00      137     0.00     0.01  kv_test_get_set_from_file
+  0.00      1.99     0.00        4     0.00     0.00  client_post_recv_buffers
+  0.00      1.99     0.00        1     0.00     0.00  ___ibv_query_port
+  0.00      1.99     0.00        1     0.00     0.00  check_for_input_validity
+  0.00      1.99     0.00        1     0.00     0.00  client_init_ctx
+  0.00      1.99     0.00        1     0.00     1.92  client_loop
+  0.00      1.99     0.00        1     0.00     0.00  client_pending_requests_init
+  0.00      1.99     0.00        1     0.00     0.00  connect_ctx
+  0.00      1.99     0.00        1     0.00     0.00  get_port_info
+  0.00      1.99     0.00        1     0.00     0.00  gid_to_wire_gid
+  0.00      1.99     0.00        1     0.00     0.03  kv_open
+  0.00      1.99     0.00        1     0.00     1.92  main_loop
+  0.00      1.99     0.00        1     0.00     0.00  verbs_get_ctx
+  0.00      1.99     0.00        1     0.00     0.00  wire_gid_to_gid
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.50% of 1.99 seconds
+
+index % time    self  children    called     name
+                0.00    1.92       1/1           main_loop [2]
+[1]     96.5    0.00    1.92       1         client_loop [1]
+                0.00    1.89     137/137         kv_test_get_set_from_file [4]
+                0.00    0.03       1/1           kv_open [10]
+                0.00    0.00       1/1           check_for_input_validity [31]
+-----------------------------------------------
+                0.00    1.92       1/1           main [3]
+[2]     96.5    0.00    1.92       1         main_loop [2]
+                0.00    1.92       1/1           client_loop [1]
+-----------------------------------------------
+                                                 <spontaneous>
+[3]     96.5    0.00    1.92                 main [3]
+                0.00    1.92       1/1           main_loop [2]
+-----------------------------------------------
+                0.00    1.89     137/137         client_loop [1]
+[4]     95.0    0.00    1.89     137         kv_test_get_set_from_file [4]
+                0.00    1.88    6845/6845        kv_get [5]
+                0.01    0.00    6846/6846        kv_set [13]
+                0.00    0.00    6845/6845        kv_release [28]
+-----------------------------------------------
+                0.00    1.88    6845/6845        kv_test_get_set_from_file [4]
+[5]     94.4    0.00    1.88    6845         kv_get [5]
+                1.16    0.72   49444/49444       client_wait_completions [6]
+                0.00    0.00    6845/54511       get_client_pending_request [14]
+                0.00    0.00    6845/27298       get_free_send_idx [18]
+                0.00    0.00    6845/13691       get_new_tid [24]
+                0.00    0.00    6845/13691       add_client_pending_request [23]
+                0.00    0.00    6845/27297       client_post_send [19]
+                0.00    0.00    6845/13607       remove_client_pending_request [25]
+-----------------------------------------------
+                1.16    0.72   49444/49444       kv_get [5]
+[6]     94.3    1.16    0.72   49444         client_wait_completions [6]
+                0.69    0.00 414018351/414018351     ibv_poll_cq [7]
+                0.00    0.02   13607/13607       client_handle_recv [11]
+                0.00    0.00   13607/13607       client_send_rdma_fin [15]
+                0.00    0.00   13607/54511       get_client_pending_request [14]
+                0.00    0.00    6762/13607       remove_client_pending_request [25]
+                0.00    0.00       3/4           client_post_recv_buffers [30]
+-----------------------------------------------
+                0.69    0.00 414018351/414018351     client_wait_completions [6]
+[7]     34.7    0.69    0.00 414018351         ibv_poll_cq [7]
+-----------------------------------------------
+                                                 <spontaneous>
+[8]      3.5    0.07    0.00                 server_loop [8]
+-----------------------------------------------
+                0.03    0.00       1/1           kv_open [10]
+[9]      1.5    0.03    0.00       1         client_exch_dest [9]
+                0.00    0.00       1/1           gid_to_wire_gid [36]
+                0.00    0.00       1/1           wire_gid_to_gid [38]
+-----------------------------------------------
+                0.00    0.03       1/1           client_loop [1]
+[10]     1.5    0.00    0.03       1         kv_open [10]
+                0.03    0.00       1/1           client_exch_dest [9]
+                0.00    0.00       1/1           client_init_ctx [32]
+                0.00    0.00       1/4           client_post_recv_buffers [30]
+                0.00    0.00       1/1           get_port_info [35]
+                0.00    0.00       1/1           connect_ctx [34]
+                0.00    0.00       1/1           client_pending_requests_init [33]
+-----------------------------------------------
+                0.00    0.02   13607/13607       client_wait_completions [6]
+[11]     1.1    0.00    0.02   13607         client_handle_recv [11]
+                0.02    0.00    6845/6845        client_handle_recv_rdma_rkey_get [12]
+                0.00    0.00    6762/6762        client_handle_recv_rdma_rkey_set [16]
+-----------------------------------------------
+                0.02    0.00    6845/6845        client_handle_recv [11]
+[12]     1.1    0.02    0.00    6845         client_handle_recv_rdma_rkey_get [12]
+                0.00    0.00    6845/54511       get_client_pending_request [14]
+                0.00    0.00    6845/6845        client_post_rdma_read [27]
+-----------------------------------------------
+                0.01    0.00    6846/6846        kv_test_get_set_from_file [4]
+[13]     0.6    0.01    0.00    6846         kv_set [13]
+                0.00    0.00    6845/54511       get_client_pending_request [14]
+                0.00    0.00    6846/27298       get_free_send_idx [18]
+                0.00    0.00    6846/6846        num_pending_requests [26]
+                0.00    0.00    6846/13691       get_new_tid [24]
+                0.00    0.00    6846/13691       add_client_pending_request [23]
+                0.00    0.00    6845/27297       client_post_send [19]
+-----------------------------------------------
+                0.00    0.00    6762/54511       client_handle_recv_rdma_rkey_set [16]
+                0.00    0.00    6845/54511       kv_get [5]
+                0.00    0.00    6845/54511       kv_set [13]
+                0.00    0.00    6845/54511       client_handle_recv_rdma_rkey_get [12]
+                0.00    0.00   13607/54511       client_send_rdma_fin [15]
+                0.00    0.00   13607/54511       client_wait_completions [6]
+[14]     0.5    0.01    0.00   54511         get_client_pending_request [14]
+-----------------------------------------------
+                0.00    0.00   13607/13607       client_wait_completions [6]
+[15]     0.1    0.00    0.00   13607         client_send_rdma_fin [15]
+                0.00    0.00   13607/54511       get_client_pending_request [14]
+                0.00    0.00   13607/27298       get_free_send_idx [18]
+                0.00    0.00   13607/27297       client_post_send [19]
+-----------------------------------------------
+                0.00    0.00    6762/6762        client_handle_recv [11]
+[16]     0.1    0.00    0.00    6762         client_handle_recv_rdma_rkey_set [16]
+                0.00    0.00    6762/54511       get_client_pending_request [14]
+                0.00    0.00    6762/6762        client_post_rdma_write [29]
+-----------------------------------------------
+                0.00    0.00    6762/40904       client_post_rdma_write [29]
+                0.00    0.00    6845/40904       client_post_rdma_read [27]
+                0.00    0.00   27297/40904       client_post_send [19]
+[17]     0.0    0.00    0.00   40904         ibv_post_send [17]
+-----------------------------------------------
+                0.00    0.00    6845/27298       kv_get [5]
+                0.00    0.00    6846/27298       kv_set [13]
+                0.00    0.00   13607/27298       client_send_rdma_fin [15]
+[18]     0.0    0.00    0.00   27298         get_free_send_idx [18]
+-----------------------------------------------
+                0.00    0.00    6845/27297       kv_get [5]
+                0.00    0.00    6845/27297       kv_set [13]
+                0.00    0.00   13607/27297       client_send_rdma_fin [15]
+[19]     0.0    0.00    0.00   27297         client_post_send [19]
+                0.00    0.00   27297/40904       ibv_post_send [17]
+-----------------------------------------------
+                0.00    0.00   15967/15967       client_post_recv_buffers [30]
+[20]     0.0    0.00    0.00   15967         client_post_recv [20]
+                0.00    0.00   15967/15967       ibv_post_recv [22]
+-----------------------------------------------
+                0.00    0.00   15967/15967       client_post_recv_buffers [30]
+[21]     0.0    0.00    0.00   15967         get_free_recv_idx [21]
+-----------------------------------------------
+                0.00    0.00   15967/15967       client_post_recv [20]
+[22]     0.0    0.00    0.00   15967         ibv_post_recv [22]
+-----------------------------------------------
+                0.00    0.00    6845/13691       kv_get [5]
+                0.00    0.00    6846/13691       kv_set [13]
+[23]     0.0    0.00    0.00   13691         add_client_pending_request [23]
+-----------------------------------------------
+                0.00    0.00    6845/13691       kv_get [5]
+                0.00    0.00    6846/13691       kv_set [13]
+[24]     0.0    0.00    0.00   13691         get_new_tid [24]
+-----------------------------------------------
+                0.00    0.00    6762/13607       client_wait_completions [6]
+                0.00    0.00    6845/13607       kv_get [5]
+[25]     0.0    0.00    0.00   13607         remove_client_pending_request [25]
+-----------------------------------------------
+                0.00    0.00    6846/6846        kv_set [13]
+[26]     0.0    0.00    0.00    6846         num_pending_requests [26]
+-----------------------------------------------
+                0.00    0.00    6845/6845        client_handle_recv_rdma_rkey_get [12]
+[27]     0.0    0.00    0.00    6845         client_post_rdma_read [27]
+                0.00    0.00    6845/40904       ibv_post_send [17]
+-----------------------------------------------
+                0.00    0.00    6845/6845        kv_test_get_set_from_file [4]
+[28]     0.0    0.00    0.00    6845         kv_release [28]
+-----------------------------------------------
+                0.00    0.00    6762/6762        client_handle_recv_rdma_rkey_set [16]
+[29]     0.0    0.00    0.00    6762         client_post_rdma_write [29]
+                0.00    0.00    6762/40904       ibv_post_send [17]
+-----------------------------------------------
+                0.00    0.00       1/4           kv_open [10]
+                0.00    0.00       3/4           client_wait_completions [6]
+[30]     0.0    0.00    0.00       4         client_post_recv_buffers [30]
+                0.00    0.00   15967/15967       get_free_recv_idx [21]
+                0.00    0.00   15967/15967       client_post_recv [20]
+-----------------------------------------------
+                0.00    0.00       1/1           client_loop [1]
+[31]     0.0    0.00    0.00       1         check_for_input_validity [31]
+-----------------------------------------------
+                0.00    0.00       1/1           kv_open [10]
+[32]     0.0    0.00    0.00       1         client_init_ctx [32]
+-----------------------------------------------
+                0.00    0.00       1/1           kv_open [10]
+[33]     0.0    0.00    0.00       1         client_pending_requests_init [33]
+-----------------------------------------------
+                0.00    0.00       1/1           kv_open [10]
+[34]     0.0    0.00    0.00       1         connect_ctx [34]
+-----------------------------------------------
+                0.00    0.00       1/1           kv_open [10]
+[35]     0.0    0.00    0.00       1         get_port_info [35]
+                0.00    0.00       1/1           ___ibv_query_port [128]
+-----------------------------------------------
+                0.00    0.00       1/1           client_exch_dest [9]
+[36]     0.0    0.00    0.00       1         gid_to_wire_gid [36]
+-----------------------------------------------
+                0.00    0.00       1/1           ___ibv_query_port [128]
+[37]     0.0    0.00    0.00       1         verbs_get_ctx [37]
+-----------------------------------------------
+                0.00    0.00       1/1           client_exch_dest [9]
+[38]     0.0    0.00    0.00       1         wire_gid_to_gid [38]
+-----------------------------------------------
+                0.00    0.00       1/1           get_port_info [35]
+[128]    0.0    0.00    0.00       1         ___ibv_query_port [128]
+                0.00    0.00       1/1           verbs_get_ctx [37]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+ [128] ___ibv_query_port      [30] client_post_recv_buffers [17] ibv_post_send
+  [23] add_client_pending_request [19] client_post_send    [5] kv_get
+  [31] check_for_input_validity [15] client_send_rdma_fin [10] kv_open
+   [9] client_exch_dest        [6] client_wait_completions [28] kv_release
+  [11] client_handle_recv     [34] connect_ctx            [13] kv_set
+  [12] client_handle_recv_rdma_rkey_get [14] get_client_pending_request [4] kv_test_get_set_from_file
+  [16] client_handle_recv_rdma_rkey_set [21] get_free_recv_idx [2] main_loop
+  [32] client_init_ctx        [18] get_free_send_idx      [26] num_pending_requests
+   [1] client_loop            [24] get_new_tid            [25] remove_client_pending_request
+  [33] client_pending_requests_init [35] get_port_info     [8] server_loop
+  [27] client_post_rdma_read  [36] gid_to_wire_gid        [37] verbs_get_ctx
+  [29] client_post_rdma_write  [7] ibv_poll_cq            [38] wire_gid_to_gid
+  [20] client_post_recv       [22] ibv_post_recv
